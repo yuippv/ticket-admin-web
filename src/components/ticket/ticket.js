@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./home.css";
+import "./ticket.css";
 import Sidebar from "../sidebar/sidebar";
 
-class Home extends Component {
+class Ticket extends Component {
   render() {
     return (
       <div>
@@ -36,7 +36,7 @@ class Home extends Component {
           </div>
           
           {/* Tickets */}
-          <div className="w3-container" id="tickets" style={{ marginTop: 20 }}>
+          <div className="w3-container" id="ticket" style={{ marginTop: 20 }}>
             <h1 className="w3-xxxlarge w3-text-blue-grey">
               <b>Tickets</b>
             </h1>
@@ -130,4 +130,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Ticket;
