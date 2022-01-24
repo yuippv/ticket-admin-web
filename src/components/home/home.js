@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./home.css";
 import Sidebar from "../sidebar/sidebar";
 
-class Home extends Component {
-  render() {
+function Home(){
     return (
       <div>
         <Sidebar />
@@ -127,7 +126,6 @@ class Home extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Home;

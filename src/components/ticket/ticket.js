@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./ticket.css";
 import Sidebar from "../sidebar/sidebar";
 
-class Ticket extends Component {
-  render() {
+function Ticket() {
     return (
       <div>
         <Sidebar />
@@ -11,7 +10,7 @@ class Ticket extends Component {
         <header className="w3-container w3-top w3-hide-large w3-blue-grey w3-xlarge w3-padding">
           <a
             href="javascript:void(0)"
-            className="w3-button w3-red w3-margin-right"
+            className="w3-button w3-blue-grey w3-margin-right"
             onclick="w3_open()"
           >
             ☰
@@ -127,7 +126,7 @@ class Ticket extends Component {
         </div>
       </div>
     );
-  }
+  
 }
 
 export default Ticket;

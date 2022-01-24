@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./sidebar.css";
 
 
-class Sidebar extends Component {
-    render() {
+function Sidebar() {
       return (
         <div>
         <nav
@@ -53,6 +52,7 @@ class Sidebar extends Component {
           </div>
         </nav>
     </div>
-)}}
+    )
+}
 
 export default Sidebar;
