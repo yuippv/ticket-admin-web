@@ -39,14 +39,18 @@ function Home(){
             <h1 className="w3-xxxlarge w3-text-blue-grey">
               <b>Tickets</b>
             </h1>
-            <hr
-              style={{ width: 120, border: "5px solid grey" }}
-              className="w3-round"
-            />
-            <p>
-              We are a interior design service that focus on what's best for
-              your home and what's best for you!
-            </p>
+            <div class="row">
+              <div class="col-10">
+                <hr
+                  style={{ width: "100%", border: "5px solid grey" }}
+                  className="w3-round"
+                />
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-dark">Create Ticket</button>
+              </div>
+            </div>
+            <br />
             <div className="w3-row-padding">
             <div className="w3-margin-bottom">
               <table style={{width:'100%'}}>
