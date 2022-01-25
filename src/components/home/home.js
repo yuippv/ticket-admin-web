@@ -61,7 +61,11 @@ function Home(){
                 />
               </div>
               <div class="col-2">
-                <button type="button" class="btn btn-dark">Create Ticket</button>
+                <a href="/create">
+                  <button type="button" class="btn btn-light w3-blue-grey">
+                    Create Ticket
+                  </button>
+                </a> 
               </div>
             </div>
             <br />

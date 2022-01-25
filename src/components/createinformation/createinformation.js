@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "./create.css";
 import Sidebar from "../sidebar/sidebar";
+import "./createinformation.css";
 
-function Create() {
-  return (
-    <div>
-        <Sidebar />
-        <div className="w3-main" style={{marginLeft: 340, marginRight: 40}}>
+function Createinformation (){
+    return(
+        <div>
+            <Sidebar />
+            <div className="w3-main" style={{marginLeft: 340, marginRight: 40}}>
             {/* Create */}
             <div className="w3-container" id="contact" style={{marginTop: 80}}>
                 <h1 className="w3-jumbo w3-text-dark-grey"><b>Services Maintainance</b></h1>
@@ -17,7 +17,11 @@ function Create() {
                 />
                 <p style={{marginTop: 20}}>Fill out the form to check the equipment information!</p>
                 <div class="w3-row-padding w3-light-grey">
-                    <form action="/createinformation" target="_blank">
+                    <form action="/action_page.php" target="_blank">
+                        <div className="w3-section text-left">
+                            <label>Subject</label>
+                            <input className="w3-input w3-border" type="text" name="Subject" required />
+                        </div>
                         <div className="w3-section text-left">
                             <label>Name</label>
                             <input className="w3-input w3-border" type="text" name="Name" required />
@@ -30,13 +34,25 @@ function Create() {
                             <label>Email</label>
                             <input className="w3-input w3-border" type="text" name="Email" required />
                         </div>
+                        <div className="w3-section text-left">
+                            <label>Address</label>
+                            <input className="w3-input w3-border" type="text" name="Address" required />
+                        </div>
+                        <div className="w3-section text-left">
+                            <label>Serial Number</label>
+                            <input className="w3-input w3-border" type="text" name="SerialNumber" required />
+                        </div>
+                        <div className="w3-section text-left">
+                            <label>Model</label>
+                            <input className="w3-input w3-border" type="text" name="Model" required />
+                        </div>
                         <button type="submit" className="w3-button w3-block w3-padding-large w3-margin-bottom w3-blue-grey ">Next</button>
                     </form>  
                 </div>
             </div>
         </div>
-    </div>
-  );
+        </div>
+    );
 }
 
-export default Create;
+export default Createinformation;
