@@ -1,8 +1,22 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import "./home.css";
 import Sidebar from "../sidebar/sidebar";
+import $ from "jquery";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import TicketModal from "./ticketModal";
+$.DataTable = require("datatables.net");
 
 function Home(){
+
+  useEffect(() => {
+    $(document).ready(function () {
+      $("#example").DataTable();
+    });
+  });
+
+    const [modalShow, setModalShow] = useState(false);
+
     return (
       <div>
         <Sidebar />
@@ -33,7 +47,7 @@ function Home(){
               <b>Services Maintainance </b>
             </h1>
           </div>
-          
+          <TicketModal show={modalShow} onHide={() => setModalShow(false)} />
           {/* Tickets */}
           <div className="w3-container" id="tickets" style={{ marginTop: 20 }}>
             <h1 className="w3-xxxlarge w3-text-blue-grey">
@@ -53,7 +67,71 @@ function Home(){
             <br />
             <div className="w3-row-padding">
             <div className="w3-margin-bottom">
-              <table style={{width:'100%'}}>
+            <div className="card-body">
+          <div className="table-responsive">
+            <table id="example" className="display" style={{ width: "100%" }}>
+              <thead>
+                <tr>
+                  <th>TicketId</th>
+                  <th>Subject</th>
+                  <th>Customer</th>
+                  <th>Owner</th>
+                  <th>CreatedBy</th>
+                  <th>CreatedAt</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody className="text-dark">
+                <tr>
+                  <td>1</td>
+                  <td>แอร์ไม่เย็น</td>
+                  <td>บางกอก กอกอก</td>
+                  <td>ช่างเก่ง มากมาย</td>
+                  <td>สมศรี สีทอง</td>
+                  <td>2011/04/25</td>
+                  <td>
+                    <span
+                      className="badge bg-secondary"
+                      style={{ color: "white" }}
+                    >
+                      New
+                    </span>
+                  </td>
+                  <td>
+                    {" "}
+                    <Button
+                      variant="primary"
+                      onClick={() => setModalShow(true)}
+                    >
+                      Details
+                    </Button>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  {/* <th>TicketId</th>
+                <th>Subject</th>
+                  <th>Customer</th>
+                  <th>Owner</th>
+                  <th>CreatedBy</th>
+                  <th>CreatedAt</th>
+                  <th>Status</th> */}
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+              {/* <table style={{width:'100%'}}>
                 <thead className="w3-table w3-blue-grey w3-center">
                     <tr>
                       <th className="w3-center">
@@ -104,7 +182,7 @@ function Home(){
                       </td>
                     </tr>
                 </tbody>
-              </table>
+              </table> */}
               {/* <ul >
                 <li className="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
                 <li className="w3-padding-16">Floorplanning</li>
