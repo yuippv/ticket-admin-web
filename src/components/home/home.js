@@ -24,12 +24,12 @@ function Home(){
         <header className="w3-container w3-top w3-hide-large w3-blue-grey w3-xlarge w3-padding">
           <a
             href="javascript:void(0)"
-            className="w3-button w3-red w3-margin-right"
+            className="w3-button w3-blue-grey w3-margin-right"
             onclick="w3_open()"
           >
             ☰
           </a>
-          <span>Company Name</span>
+          <span>ENIXER</span>
         </header>
         {/* Overlay effect when opening sidebar on small screens */}
         <div
@@ -44,7 +44,7 @@ function Home(){
           {/* Header */}
           <div className="w3-container" style={{ marginTop: 80 }} id="servicemaintain">
             <h1 className="w3-jumbo w3-text-dark-grey">
-              <b>Services Maintainance </b>
+              <b>Services Maintainance</b>
             </h1>
           </div>
           <TicketModal show={modalShow} onHide={() => setModalShow(false)} />

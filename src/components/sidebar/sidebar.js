@@ -29,7 +29,7 @@ function Sidebar() {
           </div>
           <div className="w3-bar-block">
             <a
-              href="#"
+              href="/"
               onclick="w3_close()"
               className="w3-bar-item w3-button w3-hover-white"
             >
